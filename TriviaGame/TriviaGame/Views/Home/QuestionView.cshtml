@@ -1,0 +1,13 @@
+﻿@model TriviaGame.Models.APIModels.Questions
+
+<h1 class="display-4">Questions from Category: @Model.Category</h1>
+<div class="text-center"
+    <h2>@Model.Question</h2>
+    <p>@Model.CorrectAnswer</p>
+    @for(int i = 0; i < Model.IncorrectAnswers.Count; i++)
+    {
+        <p>
+            @Model.IncorrectAnswers[i]
+        </p>
+    }
+</div>

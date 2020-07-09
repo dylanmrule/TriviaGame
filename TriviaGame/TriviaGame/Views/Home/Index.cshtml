@@ -1,0 +1,15 @@
+﻿@model TriviaGame.Models.APIModels.CategoryList
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <h4>List of Categories Available:</h4>
+    @for(int i = 0; i < Model.Name.Count; i++)
+    {
+        <p>
+            <a asp-action="QuestionView" asp-controller="Home" asp-route-Id="@Model.Id[i]">@Model.Name[i]</a>
+        </p>
+    }
+</div>
